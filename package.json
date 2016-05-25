@@ -1,6 +1,6 @@
 {
   "name": "draftjs-multidecorators",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Combine multiple decorators for DraftJS",
   "main": "index.js",
   "scripts": {
