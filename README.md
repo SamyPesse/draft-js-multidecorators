@@ -1,7 +1,7 @@
-# draftjs-multidecorators
+# draft-js-multidecorators
 
-[![Build Status](https://travis-ci.org/SamyPesse/draftjs-multidecorators.png?branch=master)](https://travis-ci.org/SamyPesse/draftjs-multidecorators)
-[![NPM version](https://badge.fury.io/js/draftjs-multidecorators.svg)](http://badge.fury.io/js/draftjs-multidecorators)
+[![Build Status](https://travis-ci.org/SamyPesse/draft-js-multidecorators.png?branch=master)](https://travis-ci.org/SamyPesse/draft-js-multidecorators)
+[![NPM version](https://badge.fury.io/js/draft-js-multidecorators.svg)](http://badge.fury.io/js/draft-js-multidecorators)
 
 
 > Combine multiple Draft's decorators into one.
@@ -9,14 +9,14 @@
 ### Installation
 
 ```
-$ npm install draftjs-multidecorators
+$ npm install draft-js-multidecorators
 ```
 
 ### Usage
 
 ```js
 var Draft = require('draft-js');
-var MultiDecorator = require('draftjs-multidecorators');
+var MultiDecorator = require('draft-js-multidecorators');
 
 var decorator = new MultiDecorator([
     new SomeCustomDecorator(),
