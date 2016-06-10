@@ -27,3 +27,8 @@ var decorator = new MultiDecorator([
 
 var editorState = Draft.EditorState.createEmpty(decorator)
 ```
+
+### See also
+
+You can use [SimpleDecorator](https://github.com/Soreine/draft-js-simpledecorator) to easily build decorators.
+
