@@ -8,12 +8,16 @@ describe('MultiDecorator', function() {
         text: 'AAA BBB CCC ABC'
     });
 
+    var firstDecoratorStrategy = expect.createSpy().andCall(
+        function(block, callback, contentState) {
+            callback(0, 3);
+            callback(12, 15);
+        }
+    )
+
     var firstDecorator = new Draft.CompositeDecorator([
         {
-            strategy: function(block, callback) {
-                callback(0, 3);
-                callback(12, 15);
-            },
+            strategy: firstDecoratorStrategy,
             component: function() { return 'a'; }
         }
     ]);
@@ -43,6 +47,14 @@ describe('MultiDecorator', function() {
         secondDecorator,
         thirdDecorator
     ]);
+
+    it('should pass contentState through to decorators', function() {
+        const contentState = 'mockContentState'
+        decorator.getDecorations(block, contentState);
+        expect(firstDecoratorStrategy.calls[0].arguments[0]).toBe(block)
+        expect(firstDecoratorStrategy.calls[0].arguments[2]).toBe(contentState)
+        firstDecoratorStrategy.reset()
+    })
 
     it('should correctly decorate text', function() {
         var out = decorator.getDecorations(block);
