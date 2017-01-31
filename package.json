@@ -23,7 +23,7 @@
     "immutable": "*"
   },
   "devDependencies": {
-    "draft-js": "^0.7.0",
+    "draft-js": "^0.10.0",
     "expect": "^1.20.1",
     "mocha": "^2.5.3",
     "react": "^15.1.0",
