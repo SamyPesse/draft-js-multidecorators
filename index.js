@@ -12,11 +12,11 @@ function MultiDecorator(decorators) {
     @param {ContentBlock}
     @return {List<String>}
 */
-MultiDecorator.prototype.getDecorations = function(block) {
+MultiDecorator.prototype.getDecorations = function(block, contentState) {
     var decorations = Array(block.getText().length).fill(null);
 
     this.decorators.forEach(function(decorator, i) {
-        var _decorations = decorator.getDecorations(block);
+        var _decorations = decorator.getDecorations(block, contentState);
 
         _decorations.forEach(function(key, offset) {
             if (!key) {
